@@ -16,6 +16,7 @@ app.get("/", async (c) => {
 		schema,
 	});
 
+	console.log("SCHEMA", schema);
 	const authors = await db.query.authors.findMany();
 
 	return c.json(authors);
